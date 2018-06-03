@@ -1,0 +1,23 @@
+ <div class="nav-pagination">
+   <!-- <a 
+    *ngIf="response.previous" 
+    routerLink="/{{currentPage - 1}}/0"
+    class="prev">< prev</a>
+    -->
+
+  <span class="pages-numbers">
+    <span class="page" *ngFor="let page of pages">
+      <a routerLink="/blog/{{page}}" routerLinkActive="active">
+      {{page}}
+      </a>
+    </span>
+  </span>
+
+  <!--
+  <a 
+    *ngIf="response.next" 
+    routerLink="/{{currentPage + 1}}/0"
+    class="next">next ></a>  
+  -->
+
+  </div>

@@ -1,0 +1,18 @@
+.nav-pagination {
+  margin: 2em auto;
+}
+
+.active, span.page a:hover {
+  font-weight: bold;
+}
+span.page{
+  background: #f0f0f0;
+  margin-right: 2px;
+  text-align: center;
+  display: inline-block;
+  width: 20px;
+}
+
+span.page a:hover {
+  text-decoration: none;
+}

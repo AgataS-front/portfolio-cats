@@ -1,0 +1,16 @@
+<h2 class="subpage-title">{{ pageTitle }}</h2>
+
+<ng-container>
+	<div *ngFor="let item of anatomyList, let i = index">
+			<div class="card" [ngClass]="{'is-active' : activeIndex === i}" (click)="toggleClass($event, i)">
+				<div class="card-header" >
+					{{ item.title }}
+				</div>
+				<div class="card-body">
+					<p class="card-text">
+						{{ item.content }}
+					</p>
+				</div>
+			</div>
+		</div>
+</ng-container>

@@ -1,0 +1,28 @@
+/*
+ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+ul li {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+*/
+
+
+.nav-link {
+  color: #999;
+}
+
+.active {
+  color: #333;
+}
+.title-menu {
+  color: #686868;
+  font-size:1.2em;
+  font-family: 'Vollkorn SC', serif;
+}

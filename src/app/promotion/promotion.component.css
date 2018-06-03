@@ -1,0 +1,26 @@
+.box-item img {
+  max-width: 100%;
+  margin-top:1em;
+}
+
+.box-grid.row.blog {
+  justify-content: space-around;
+}
+
+.box-item{
+  background: #f0f0f0;
+  box-sizing: border-box;
+  border: 10px solid #fff;
+  position: relative;
+  transition: all 0.3s;
+}
+.box-item:hover{
+  box-shadow: 0px 0px 1em #ccc;
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.box-title {
+  margin-top: 0.5em;
+}
+

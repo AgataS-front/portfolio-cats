@@ -1,0 +1,43 @@
+<h2 class="subpage-title">{{ pageTitle }}</h2>
+
+<table class="table table-striped table-responsive table-cats" >
+<thead class="thead-dark">
+  <th>Rasa</th>
+  <th>Długosć sierści</th>
+  <th>Średnia waga</th>
+  <th>Usposobienie</th>
+  <th>Aktywność</th>
+  <th>Długość życia</th>
+  <th>Cena</th>
+</thead>
+
+
+<tbody>
+<ng-container *ngFor="let cat of catList" >
+  <ng-container *ngIf="cat.ageMax>10">
+  <tr>  
+  <td>{{ cat.name }}</td>
+  <td>{{ cat.furLength }}</td>
+  <td>{{ cat.avgWeight }}</td>
+  <td>{{ cat.character | divide}} </td>
+  <td>{{ cat.energy }}</td>
+    <ng-container *ngIf="checkAge(cat.ageMin, cat.ageMax); ">
+      <td>{{ cat.ageMin }} - {{ cat.ageMax }} </td>
+    </ng-container>
+    <ng-container *ngIf="!checkAge(cat.ageMin, cat.ageMax); ">
+      <td>{{ cat.ageMin }}</td>
+    </ng-container>
+  <td>{{ cat.priceMin }} - {{ cat.priceMax}}</td>
+
+  <ng-container *ngSwitch="">
+    <td>{{ cat.priceMin }} - {{ cat.priceMax}}</td>
+
+  </ng-container>
+  </tr>
+
+  </ng-container>
+</ng-container>
+</tbody>
+
+
+</table>

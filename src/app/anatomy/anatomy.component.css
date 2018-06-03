@@ -1,0 +1,12 @@
+.card {
+  margin-bottom: 1.5em;
+}
+.card-body {
+  display: none;
+}
+.is-active .card-body {
+  display: block;
+}
+.card-header:hover {
+  cursor: pointer;
+}

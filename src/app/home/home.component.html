@@ -1,0 +1,98 @@
+<section class="carousel" >
+  <div class="carousel-container">
+    <!--<img [src]="pictures[0]" />-->
+    <div class="fade-slide">
+      <img [src]="pictures[currentPicture]" />
+    </div>
+
+    <div class="dots-container" >
+      <ng-container *ngFor="let dot of dots; let i = index">
+        <span class="dot" (click)="findDot($event, i);" 
+          [ngClass]="{'dot-selected' : activeIndex === i}">
+        </span>
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+
+
+  <article>
+    <p class="intro">Mówi się że to pies jest najlepszym przyjacielem człowieka. Gdy mówisz: "Lubię psy!", reakcja rozmówcy jest entuzjastyczna lub neutralna. Jednak, gdy oświadczysz: "Lubię koty", zyskujesz albo przyjaciela, z którym zamiast rozmawiać o pogodzie, możesz godzinami opowiadać o wybrykach swoich futrzaków, albo przeciwnika, który za wszelką cenę będzie chciał Ci udowodnić, że koty są wredne, brzydkie i ogólnie nie można z nimi dojść do ładu.</p>
+    <p>Nasuwa się więc pytanie, co te czworonożne stworzenia w sobie mają, że z reguły budzą skrajne emocje? Chyba nie istnieje odpowiedź na to pytanie. Moim celem nie jest przekonywanie, że koty są najcudowniejszymi stworzeniami na świecie (psy również są!) i trzeba jednego (albo kilka) przygarnąć. Chcę po prostu podzielić się z Tobą swoją wiedzą i doświadczeniem. Może znajdziesz tu coś, co Cię zainteresuje lub rozbawi i dzięki temu Twój stosunek do kotów się zmieni?</p>
+  </article>
+
+  <article>
+    <h3 class="article-headline">O czym możesz przeczytać?</h3>
+    <p>Podstawowe informacje o kotach</p>
+   <div class="box-grid row">
+      <div class="box-item col-lg-4">
+        <h4 class="box-title">Rasy</h4>
+          <div class="box-content">
+            <img src="" alt="" title="" />
+            <p>Czyli mruczek mruczkowi nierówny</p>
+            <p><a routerLink="/rasy" >Zobacz</a></p>
+          </div>
+      </div>
+      <div class="box-item col-lg-4">
+          <h4 class="box-title">Budowa</h4>
+            <div class="box-content">
+              <img src="" alt="" title="" />
+              <p>Czyli co czyni kota kotem</p>
+              <p><a routerLink="/budowa" >Zobacz</a></p>
+            </div>
+      </div>
+      <div class="box-item col-lg-4">
+            <h4 class="box-title">Historia</h4>
+              <div class="box-content">
+                <img src="" alt="" title="" />
+                <p>Czyli jak koty zyskały popularność</p>
+                <p><a routerLink="/historia" >Zobacz</a></p>
+              </div>
+        </div>
+      
+    </div>
+  </article>
+  <article>
+    <h3 class="article-headline">Koci blog</h3>
+    <p>Najnowsze złote myśli kota</p>
+
+    <div class="box-grid row blog">
+        <div class="box-item col-lg-4">
+            <img src="img\blog\cat-love-small.jpg" alt="" title="" />
+            <h4 class="box-title">Umiem pokazać, że cię kocham!</h4>
+            <hr/>
+              <div class="box-content">
+                <p>Ponoć jestem niewdzięcznym stworzeniem. A może to ty nie umiesz patrzeć?</p>
+                <p><a class="link-disabled" href="blog-kocham.html">W przygotowaniu</a></p>
+              </div>
+          </div>
+          <div class="box-item col-lg-4">
+              <img src="img\blog\cat-present-small.jpg" alt="" title="" />
+              <h4 class="box-title">Jestem tutaj!</h4>
+              <hr/>
+                <div class="box-content">
+                  <p>Lubię zaznaczać swoją obecność. W końcu jestem panem twojego domu.</p>
+                  <p><a class="link-disabled" href="blog-kocham.html">W przygotowaniu</a></p>
+                </div>
+            </div>
+            <div class="box-item col-lg-4">
+                <img src="img\blog\cat-play-small.jpg" alt="" title="" />
+                <h4 class="box-title">Pobaw się ze mną!</h4>
+                <hr/>
+                  <div class="box-content">
+                    <p>No naprawdę, tobie też przyda się trochę ruchu i nie musisz mnie wyprowadzać, kiedy pada.</p>
+                    <p><a class="link-disabled" href="blog-kocham.html">W przygotowaniu</a></p>
+                  </div>
+              </div>
+ 
+        
+        
+      </div>
+
+  </article>
+
+  <article>
+    <h3 class="article-headline">Skontaktuj się</h3>
+    <p>Chcesz podzielić się swoim doświadczeniem? A może masz uwagi do samej strony? <a routerLink="/kontakt" >Skontaktuj się ze mną!</a></p>
+  </article>

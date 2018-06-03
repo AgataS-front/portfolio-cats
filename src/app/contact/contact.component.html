@@ -1,0 +1,119 @@
+
+<h2 class="subpage-title">{{ pageTitle }}</h2>
+
+<form #f="ngForm" (ngSubmit)="submit(f)">
+
+<div class="form-group">
+  <label for="nameId">
+    <span class="req">*</span> Imię
+    <input
+      required
+      type="text"
+      ngModel
+      id="nameId"
+      name="nameM"
+      #nameM="ngModel"
+      class="form-control">
+    <div class="alert alert-danger errormsg"
+      *ngIf="nameM.touched && !nameM.valid">
+      <div *ngIf="nameM.errors.required">
+        Imię jest wymagane
+      </div>
+    </div>
+  </label>
+</div>
+<div class="form-group">
+  <label for="surname">
+    <span class="req">*</span> Nazwisko
+    <input
+      required
+      type="text"
+      ngModel
+      id="surname"
+      name="surnameM"
+      #surnameM="ngModel"
+      class="form-control">
+    <div class="alert alert-danger errormsg"
+      *ngIf="surnameM.touched && !surnameM.valid">
+      <div *ngIf="surnameM.errors.required">
+        Nazwisko jest wymagane
+      </div>
+    </div>
+  </label>
+</div>
+
+<div class="form-group">
+  <label for="purpose">* Dlaczego chcesz się skontaktować?</label>
+<div class="form-check">
+  <input
+    class="form-check-input"
+    ngModel
+    required
+    #purpose="ngModel"
+    type="radio"
+    name="purposeRadio"
+    id="radio1"
+    value="uwagi do strony">
+  <label class="form-check-label" for="radio1">
+    Mam uwagi do strony
+  </label>
+</div>
+<div class="form-check">
+  <input
+    class="form-check-input"
+    ngModel
+    required
+    #purpose="ngModel"
+    type="radio"
+    name="purposeRadio"
+    id="radio2"
+    value="Własna historia">
+  <label class="form-check-label" for="radios2">
+    Własna historia
+  </label>
+</div>
+<div *ngIf="purpose.touched && purpose.invalid">
+    <div class="alert alert-danger errormsg">
+    Zaznacz dlaczego piszesz.
+    </div>
+</div>
+</div>
+
+<div class="form-group">
+  <label for="msgId">
+    <span class="req">*</span> Twoja wiadomość
+    <textarea
+      required
+      ngModel
+      id="msgId"
+      name="message"
+      #msg="ngModel"
+      class="form-control">
+    </textarea>
+    <div class="alert alert-danger"
+      *ngIf="msg.touched && !msg.valid">
+      <div *ngIf="msg.errors.required">
+        Wpisz swoją wiadomość
+      </div>
+    </div>
+  </label>
+</div>
+
+
+<div class="checkbox">
+  <label>
+    <input required type="checkbox" ngModel name="zgoda">
+    &nbsp;Wyrażasz zgodę na przetwarzanie danych.
+  </label>
+</div>
+
+<!--
+  <p>
+  {{ f.value | json }}
+</p>
+-->
+
+<p>&nbsp;</p>
+<button class="btn btn-primary" [disabled]="!f.valid" (click)="sendForm(nameM.value)">Wyslij</button>
+
+</form>
